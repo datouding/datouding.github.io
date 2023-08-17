@@ -27,11 +27,11 @@
 
 	<!-- search -->
 	<script>
-		var searchEngine = "https://www.google.com/search?q=";
+		var searchEngine = "https://www.baidu.com/s?wd=";
 		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
 			searchEngine = "https://www.google.com/search?q=";
 		}
-		var homeHost = "";
+		var homeHost = "https://datouding.github.io/";
 		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
 			homeHost = window.location.host;
 		}
@@ -75,6 +75,8 @@
 <script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
 
 	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	
 
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -180,7 +182,7 @@
           data-strict="1"
           data-reactions-enabled="1"
           data-emit-metadata="0"
-          data-input-position="bottom"
+          data-input-position="top"
           data-theme="light"
           data-lang="zh-CN"
           data-loading="lazy"
@@ -199,9 +201,20 @@
 	</div>
 	<div id="footer">
 	<p>
-	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+	©<span id="footerYear-start">2023</span>-<span id="footerYear-end"></span>
 	<a href="/">丁晨</a> 
 	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
 	
 	<br>
 	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
@@ -210,10 +223,6 @@
 	</p>
 </div>
 
-
-<script type="text/javascript">
-	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
-</script>
 
 <script type="text/javascript">
 	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
