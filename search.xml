@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>为什么是磁动势</title>
+    <url>/2023/08/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E7%A3%81%E5%8A%A8%E5%8A%BF/</url>
+    <content><![CDATA[<h1 id="磁动势系数的计算">磁动势系数的计算</h1>
+<h2 id="一短距系数">一、短距系数</h2>
+<p>  在讨论磁动势前，首先明确我们的讨论对象：单元电机<a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>，不管是分数槽还是整数槽的电机都可以化简为单元电机来进行简化讨论。所以我们有以下的讨论范围。</p>
+<p>  那么什磁动势？电机旋转需要有两个磁场，一个是定子磁场，一个是转子磁场</p>
+<p><span class="math display">\[
+i\hbar\frac{\partial}{\partial
+t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi \tag{1}
+\]</span></p>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li
+id="fn1"><p>电机的槽数为<em>Z</em>，极对数为<em>p</em>，<em>Z</em>与<em>p</em>有最大公约数<em>t</em>，那么这个电机就有<em>t</em>个单元电机，<em>Z/p</em>=<em>t</em>=<em>Z<sub>0</sub></em>/<em>P<sub>0</sub></em>比如说常见的整数槽48/8，则<em>Z</em>=48，<em>p</em>=4，最大公约数为4，则电机包含4个12/2的单元电机，<em>Z<sub>0</sub></em>=12，<em>p<sub>0</sub></em>=1。分数槽12/10中，<em>Z<sub>0</sub></em>=12，<em>p<sub>0</sub></em>=5<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+]]></content>
+      <tags>
+        <tag>绕组</tag>
+        <tag>MMF</tag>
+      </tags>
+  </entry>
+</search>
