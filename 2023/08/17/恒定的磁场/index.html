@@ -18,29 +18,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="磁动势系数的计算 一、短距系数 在讨论磁动势前，首先明确我们的讨论对象：单元电机1，不管是分数槽还是整数槽的电机都可以化简为单元电机来进行简化讨论。所以我们有以下的讨论范围。 那么什磁动势？电机旋转需要有两个磁场，一个是定子磁场，一个是转子磁场 \[ i\hbar\frac{\partial}{\partial t}\psi&#x3D;-\frac{\hbar^2}{2m}\nabla^2\ps">
+    <meta name="description" content="一、引入磁场 一般对场进行分析，总是分析场对物体产生的力。物体间力的作用，可以传递能量，是我们所关心的宏观参数（比如电机是转换能量的装置，宏观上电动机从电能转换为机械能），因此引入一个场，总是通过力来表述。 电场力F&#x3D;qE对静电场下了定义。库仑定理表明物体随所受的静电场力有两个主因，一个是自身所带的电荷量（单位电荷为q，试探电荷可以为kq），一个是外界的静电场。这个电场力与电荷是否运动无关">
 <meta property="og:type" content="article">
-<meta property="og:title" content="为什么是磁动势">
-<meta property="og:url" content="http://example.com/2023/08/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E7%A3%81%E5%8A%A8%E5%8A%BF/index.html">
+<meta property="og:title" content="恒定的磁场">
+<meta property="og:url" content="http://example.com/2023/08/17/%E6%81%92%E5%AE%9A%E7%9A%84%E7%A3%81%E5%9C%BA/index.html">
 <meta property="og:site_name" content="丁晨的笔记本">
-<meta property="og:description" content="磁动势系数的计算 一、短距系数 在讨论磁动势前，首先明确我们的讨论对象：单元电机1，不管是分数槽还是整数槽的电机都可以化简为单元电机来进行简化讨论。所以我们有以下的讨论范围。 那么什磁动势？电机旋转需要有两个磁场，一个是定子磁场，一个是转子磁场 \[ i\hbar\frac{\partial}{\partial t}\psi&#x3D;-\frac{\hbar^2}{2m}\nabla^2\ps">
+<meta property="og:description" content="一、引入磁场 一般对场进行分析，总是分析场对物体产生的力。物体间力的作用，可以传递能量，是我们所关心的宏观参数（比如电机是转换能量的装置，宏观上电动机从电能转换为机械能），因此引入一个场，总是通过力来表述。 电场力F&#x3D;qE对静电场下了定义。库仑定理表明物体随所受的静电场力有两个主因，一个是自身所带的电荷量（单位电荷为q，试探电荷可以为kq），一个是外界的静电场。这个电场力与电荷是否运动无关">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-17T07:01:34.000Z">
-<meta property="article:modified_time" content="2023-08-25T12:58:19.770Z">
+<meta property="article:modified_time" content="2023-08-25T13:01:19.361Z">
 <meta property="article:author" content="丁晨">
-<meta property="article:tag" content="绕组">
-<meta property="article:tag" content="MMF">
+<meta property="article:tag" content="电磁学">
+<meta property="article:tag" content="磁场">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2023/08/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E7%A3%81%E5%8A%A8%E5%8A%BF/">
+<link rel="canonical" href="http://example.com/2023/08/17/%E6%81%92%E5%AE%9A%E7%9A%84%E7%A3%81%E5%9C%BA/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/08/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E7%A3%81%E5%8A%A8%E5%8A%BF/","path":"2023/08/17/为什么是磁动势/","title":"为什么是磁动势"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/08/17/%E6%81%92%E5%AE%9A%E7%9A%84%E7%A3%81%E5%9C%BA/","path":"2023/08/17/恒定的磁场/","title":"恒定的磁场"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>为什么是磁动势 | 丁晨的笔记本</title>
+<title>恒定的磁场 | 丁晨的笔记本</title>
   
 
 
@@ -139,7 +139,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A3%81%E5%8A%A8%E5%8A%BF%E7%B3%BB%E6%95%B0%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">1.</span> <span class="nav-text">磁动势系数的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%9F%AD%E8%B7%9D%E7%B3%BB%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">一、短距系数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%92%E5%AE%9A%E7%94%B5%E6%B5%81%E7%9A%84%E7%A3%81%E5%9C%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">恒定电流的磁场</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E5%BC%95%E5%85%A5%E7%A3%81%E5%9C%BA"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">一、引入磁场</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%85%B8%E5%9E%8B%E9%9D%99%E7%A3%81%E5%9C%BA"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">二、典型静磁场</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E5%BC%95%E5%85%A5%E7%A3%81%E5%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">一、引入磁场</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%85%B8%E5%9E%8B%E9%9D%99%E7%A3%81%E5%9C%BA"><span class="nav-number">2.</span> <span class="nav-text">二、典型静磁场</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -186,7 +186,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E7%A3%81%E5%8A%A8%E5%8A%BF/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/17/%E6%81%92%E5%AE%9A%E7%9A%84%E7%A3%81%E5%9C%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/beemo-avatar.jpg">
@@ -199,12 +199,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="为什么是磁动势 | 丁晨的笔记本">
+      <meta itemprop="name" content="恒定的磁场 | 丁晨的笔记本">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          为什么是磁动势
+          恒定的磁场
         </h1>
 
         <div class="post-meta-container">
@@ -222,7 +222,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-25 20:58:19" itemprop="dateModified" datetime="2023-08-25T20:58:19+08:00">2023-08-25</time>
+      <time title="修改时间：2023-08-25 21:01:19" itemprop="dateModified" datetime="2023-08-25T21:01:19+08:00">2023-08-25</time>
     </span>
 
   
@@ -234,8 +234,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2023/08/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E7%A3%81%E5%8A%A8%E5%8A%BF/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/08/17/为什么是磁动势/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2023/08/17/%E6%81%92%E5%AE%9A%E7%9A%84%E7%A3%81%E5%9C%BA/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/08/17/恒定的磁场/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -248,19 +248,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="磁动势系数的计算">磁动势系数的计算</h1>
-<h2 id="一短距系数">一、短距系数</h2>
-<p>在讨论磁动势前，首先明确我们的讨论对象：单元电机<a href="#fn1"
-class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>，不管是分数槽还是整数槽的电机都可以化简为单元电机来进行简化讨论。所以我们有以下的讨论范围。</p>
-<p>那么什磁动势？电机旋转需要有两个磁场，一个是定子磁场，一个是转子磁场</p>
-<p><span class="math display">\[
-i\hbar\frac{\partial}{\partial
-t}\psi=-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi \tag{1}
-\]</span> ## 电机为什么会转</p>
-<p>首先解答，使电机旋转的力是怎么来的，再回答电机是怎么持续旋转的，也即产生恒定的扭矩。这里的解释只从电动机角度出发，发电机从原理上说是一样的，但是有些细节部分有差异</p>
-<h3 id="恒定电流的磁场">恒定电流的磁场</h3>
-<h4 id="一引入磁场">一、引入磁场</h4>
+    <div class="post-body" itemprop="articleBody"><h4 id="一引入磁场">一、引入磁场</h4>
 <p>一般对场进行分析，总是分析场对物体产生的力。物体间力的作用，可以传递能量，是我们所关心的宏观参数（比如电机是转换能量的装置，宏观上电动机从电能转换为机械能），因此引入一个场，总是通过力来表述。</p>
 <p>电场力<em>F=qE</em>对静电场下了定义。<strong>库仑定理</strong>表明物体随所受的静电场力有两个主因，一个是自身所带的电荷量（单位电荷为<em>q</em>，试探电荷可以为<em>kq</em>），一个是外界的静电场。这个电场力与电荷是否运动无关</p>
 <p>现在要定量地区研究磁场，去定义这个磁场，一个与电场强度<strong><em>E</em></strong>相似的物理量，<strong><em>B</em></strong>。实验结果表明，这个试探电荷在磁场中所受的磁力
@@ -279,17 +267,6 @@ F=q\pmb{v}\times \pmb{B}
 \nabla \times \pmb{B}=\mu_0\pmb{J}+\mu_0\varepsilon_0\frac{\partial
 \pmb{E}}{\partial t}
 \]</span></p>
-<aside id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>电机的槽数为<em>Z</em> ，极对数为 <em>p</em>，<em>Z</em>
-与<em>p</em> 有最大公约数<em>t</em> ，那么这个电机就有<em>t</em>
-个单元电机。单元电机的槽数为Z<sub>0</sub> ，极对数为
-<em>p<sub>0</sub></em>，<em>Z/p</em>=<em>t</em>=<em>Z<sub>0</sub></em>/<em>P<sub>0</sub></em>比如说常见的整数槽48/8，则<em>Z</em>=48，<em>p</em>=4，最大公约数为4，则电机包含4个12/2的单元电机，<em>Z<sub>0</sub></em>=12，<em>p<sub>0</sub></em>=1。分数槽12/10中，<em>Z<sub>0</sub></em>=12，<em>p<sub>0</sub></em>=5<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</aside>
 
     </div>
 
@@ -299,19 +276,19 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%BB%95%E7%BB%84/" rel="tag"># 绕组</a>
-              <a href="/tags/MMF/" rel="tag"># MMF</a>
+              <a href="/tags/%E7%94%B5%E7%A3%81%E5%AD%A6/" rel="tag"># 电磁学</a>
+              <a href="/tags/%E7%A3%81%E5%9C%BA/" rel="tag"># 磁场</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/08/17/%E6%81%92%E5%AE%9A%E7%9A%84%E7%A3%81%E5%9C%BA/" rel="prev" title="恒定的磁场">
-                  <i class="fa fa-angle-left"></i> 恒定的磁场
-                </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/08/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E7%A3%81%E5%8A%A8%E5%8A%BF/" rel="next" title="为什么是磁动势">
+                  为什么是磁动势 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
